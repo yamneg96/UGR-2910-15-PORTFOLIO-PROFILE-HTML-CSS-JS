@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inria Sans", sans-serif;
+}
+
+section.contact .contact-container {
+  display: flex;
+  margin: auto;
+  max-width: 1200px;
+  justify-content: space-between;
+  padding: 0 20px; /* Added padding to prevent edge touching */
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+.contact .contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact .contact-form h1 {
+  margin: 35px 0;
+  font-size: 2.5rem;
+}
+
+.contact .contact-form p {
+  margin-top: 5px;
+  font-size: 1.2rem;
+  font-weight: 200;
+  text-align: left;
+}
+
+.contact .contact-form form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-template-rows: repeat(5, auto);
+  margin: auto;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+div > input {
+  width: 100%; /* Full width for responsiveness */
+  width: 270px; /* Max width for inputs */
+  height: 50px;
+  border-radius: 10px;
+  padding: 0;
+  margin-bottom: 10px;
+  background-color: #4d4d4d;
+  margin-left: 20px;
+   /* Space between inputs */
+}
+
+div > textarea {
+  background-color: #4d4d4d;
+  margin-top: 20px;
+  width: 100%; /* Full width for responsiveness */
+  max-width: 650px; /* Max width for textarea */
+  height: 110px;
+  border-radius: 10px;
+  margin-bottom: 20px; /* Space between textarea and next element */
+}
+
+.message, .terms, button {
+  grid-column: 1 / 3;
+}
+
+form button {
+  width: 100%; /* Full width for responsiveness */
+  max-width: 650px; /* Max width for button */
+  height: 58px;
+  background-color: #636363;
+  color: white;
+  text-decoration: none;
+  border: 3px solid white;
+  border-radius: 10px;
+  margin-top: 50px;
+  padding: 0;
+  font-size: 1.5em;
+}
+
+button:hover {
+  background-color: #4d4d4d;
+}
+
+.contact .video-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px; /* Margin to separate from form */
+}
+
+.video-container video {
+  height: 530px;
+  width: 100%; /* Full width for responsiveness */
+  max-width: 465px; /* Max width for video */
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.video-container .social-media img {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+/* Responsive Styles */
+@media (max-width: 1060px) { /* Adjust layout below 1060px */
+  section.contact .contact-container {
+      flex-direction: column; /* Stack columns */
+      align-items: center; /* Center items */
+  }
+
+  .contact .video-container {
+      margin-left: 0; /* Remove left margin */
+      margin-top: 20px; /* Add top margin */
+  }
+
+  .contact .contact-form form {
+      grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+
+  div > input, div > textarea {
+      max-width: 100%; /* Full width on smaller screens */
+  }
+
+  form button {
+      max-width: 100%; /* Full width on smaller screens */
+  }
+
+  .video-container video {
+      max-width: 100%; /* Full width for video on smaller screens */
+  }
+}
+
+@media (max-width: 768px) { /* For smaller devices */
+  .contact .contact-form h1 {
+      font-size: 2rem; /* Smaller title size */
+  }
+
+  .contact .contact-form p {
+      font-size: 1rem; /* Smaller paragraph text */
+  }
+
+  .video-container video {
+      height: auto; /* Auto height for video */
+  }
+}
+
+@media (max-width: 630px){
+  .form{
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form input{
+    width: 100%;
+  }
+
+  form button{
+    width: 100%;
+  }
+  .form textarea{
+    width: 100%;
+  }
+}

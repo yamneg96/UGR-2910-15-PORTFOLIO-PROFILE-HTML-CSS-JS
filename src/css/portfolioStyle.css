@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: auto;
+  max-width: 1200px;
+}
+
+main h1 {
+  text-align: center; /* Center the main title */
+}
+
+main p {
+  text-align: center; /* Center the description */
+}
+
+main .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns for desktop */
+  grid-template-rows: auto; /* Automatic row height */
+  margin: auto;
+  margin-top: 10px;
+  row-gap: 20px;
+  column-gap: 20px; /* Reduced gap for better responsiveness */
+}
+
+main .grid .project {
+  width: 100%; /* Full width for responsiveness */
+  max-width: 475px; /* Set a max width for each project */
+  margin: auto; /* Center the project */
+}
+
+main .grid .project img {
+  width: 100%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0;
+}
+
+main h3, main p {
+  margin: 0;
+}
+
+main button.show-btn {
+  width: 200px;
+  height: 58px;
+  background-color: #636363;
+  color: white;
+  text-decoration: none;
+  border: 3px solid white;
+  border-radius: 30px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 0;
+  font-size: 1.5em;
+  display: block; /* Center the button */
+}
+
+/* Responsive Styles */
+@media (max-width: 1250px) {
+  main .grid {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+      column-gap: 10px; /* Adjusted for smaller screens */
+  }
+}
+
+@media (max-width: 768px) { /* Tablet Portrait */
+  main .grid {
+      display: flex; /* Use flexbox for smaller screens */
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items */
+  }
+  
+  main .grid .project {
+      max-width: 90%; /* Allow more width on mobile */
+      margin-bottom: 20px; /* Add space between projects */
+  }
+  
+  main .grid .project img {
+      max-width: 100%; /* Ensure images are responsive */
+      height: auto; /* Maintain aspect ratio */
+  }
+  
+  main button.show-btn {
+      width: 90%; /* Full width button on mobile */
+  }
+}
+
+@media (max-width: 480px) { /* Mobile */
+  main h1 {
+      font-size: 2em; /* Adjust title size */
+  }
+  
+  main button.show-btn {
+      font-size: 1.2em; /* Smaller button text */
+  }
+}

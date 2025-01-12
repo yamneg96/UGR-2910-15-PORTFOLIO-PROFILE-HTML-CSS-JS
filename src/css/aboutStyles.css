@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: "Inria Sans", sans-serif;
+}
+
+main > h1 {
+    margin: 30px 0;
+}
+
+main .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Full width for responsiveness */
+    max-width: 1200px; /* Max width */
+    margin: auto;
+    flex-wrap: wrap; /* Wrap columns on smaller screens */
+    padding: 0 20px; /* Added padding to avoid edge touching */
+}
+
+main .container .left-column,
+main .container .right-column {
+    flex: 1; /* Flex-grow to fill available space */
+    min-width: 300px; /* Minimum width for better stacking */
+}
+
+main .container h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+main .container .card {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    height: 120px;
+    width: 100%; /* Full width for responsiveness */
+    max-width: 445px; /* Max width for cards */
+    margin: 10px auto; /* Center cards with margin */
+    border-top: solid black 4px;
+    border-left: solid black 4px;
+    border-right: solid black 4px;
+}
+
+main .container .card:last-child {
+    border-bottom: solid black 4px;
+}
+
+main .container .card .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 125px;
+    height: 125px;
+    border-right: 4px solid black;
+}
+
+main .container .card img {
+    width: 62px;
+    height: 80px;
+    border-radius: 20px;
+}
+
+main .container .card p {
+    font-size: 1.5em;
+    margin-left: 20px;
+}
+
+main .container .right-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 300px; /* Minimum width for stacking */
+    margin-top: 20px; /* Space above right column */
+}
+
+main .container .right-column p {
+    font-size: 1.5rem;
+    margin: 10px;
+    color: gray;
+}
+
+main .container .right-column .audio,
+main .container .right-column .highlight {
+    display: flex;
+    font-size: 0.9rem;
+    width: 100%;
+    justify-content: start;
+    margin-top: 20px;
+    gap: 20px;
+    align-items: center;
+}
+
+main .container .right-column .audio audio {
+    width: 40%;
+}
+
+main .container .right-column .highlight img {
+    width: 76px;
+    height: 80px;
+    border-radius: 20px;
+}
+
+main .container .right-column h4 {
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+footer {
+    margin-top: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1060px) { /* Adjust layout below 1060px */
+    main .container {
+        flex-direction: column; /* Stack columns */
+        align-items: center; /* Center items */
+    }
+
+    main .container .left-column,
+    main .container .right-column {
+        width: 100%; /* Full width for each column */
+        margin-top: 20px; /* Space between columns */
+    }
+
+    main .container .card {
+        max-width: 90%;
+        margin: auto; /* Full width for cards */
+    }
+
+    main .container .right-column p {
+        font-size: 1.2rem; /* Smaller paragraph text */
+    }
+}
+
+@media (max-width: 768px) { /* Tablet Portrait */
+    main > h1 {
+        font-size: 2rem; /* Smaller title size */
+    }
+
+    main .container .card p {
+        font-size: 1.2em; /* Smaller text for cards */
+    }
+
+    main .container .right-column h4 {
+        font-size: 1.2em; /* Smaller subtitle size */
+    }
+}
+
+@media (max-width: 480px) { /* Mobile */
+    main > h1 {
+        font-size: 1.8rem; /* Smaller title size */
+    }
+}

@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inria Sans", sans-serif;
+}
+
+main {
+  margin: auto;
+  max-width: 1200px;
+  text-align: center; /* Center text for the main section */
+}
+
+main h1 {
+  margin: 35px 0;
+  font-size: 2.5rem;
+}
+
+main .intro p {
+  margin: 30px;
+  margin-top: 5px;
+  font-size: 1.2rem;
+  font-weight: 200;
+  text-align: left;
+}
+
+main .services h2 {
+  margin: 30px 0;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+main .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns for desktop */
+  grid-template-rows: auto; /* Automatic row height */
+  margin: auto;
+  margin-top: 50px;
+  row-gap: 50px; /* Adjusted for better spacing */
+  column-gap: 50px; /* Adjusted for better spacing */
+}
+
+main .grid article {
+  display: flex; /* Use flexbox for articles */
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center items */
+  text-align: left; /* Align text to the left */
+}
+
+main .grid article h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+main .grid article p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+main .grid article img {
+  width: 115px;
+  height: 100px;
+  border-radius: 20px;
+  margin-bottom: 10px; /* Space below the image */
+}
+
+/* Responsive Styles */
+@media (max-width: 1250px) {
+  main .grid {
+      grid-template-columns: 1fr; /* One column for tablets */
+      row-gap: 30px; /* Less gap for smaller screens */
+      column-gap: 0; /* No gap for smaller screens */
+  }
+
+  main .intro p {
+      text-align: center; /* Center text on smaller screens */
+  }
+}
+
+@media (max-width: 768px) { /* Tablet Portrait */
+  main h1 {
+      font-size: 2.2rem; /* Smaller title size */
+  }
+
+  main .intro p {
+      font-size: 1rem; /* Smaller paragraph text */
+  }
+
+  main .grid {
+      margin-top: 20px; /* Less margin for smaller screens */
+  }
+}
+
+@media (max-width: 480px) { /* Mobile */
+  main h1 {
+      font-size: 1.8rem; /* Smaller title size */
+  }
+
+  main .grid article {
+      text-align: center; /* Center text for mobile */
+  }
+
+  main .grid article img {
+      width: 80px; /* Smaller images for mobile */
+      height: 70px; /* Adjust height for smaller images */
+  }
+
+  main .intro p {
+      font-size: 0.9rem; /* Smaller paragraph text */
+  }
+
+  main .services h2 {
+      font-size: 1.5rem; /* Smaller subtitle size */
+  }
+}
